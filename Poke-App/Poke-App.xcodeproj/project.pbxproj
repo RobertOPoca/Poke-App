@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		48532D65290445FD00D0D876 /* Poke_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48532D64290445FD00D0D876 /* Poke_AppApp.swift */; };
-		48532D67290445FD00D0D876 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48532D66290445FD00D0D876 /* ContentView.swift */; };
 		48532D69290445FF00D0D876 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48532D68290445FF00D0D876 /* Assets.xcassets */; };
 		48532D6C290445FF00D0D876 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48532D6B290445FF00D0D876 /* Preview Assets.xcassets */; };
 		48532D76290445FF00D0D876 /* Poke_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48532D75290445FF00D0D876 /* Poke_AppTests.swift */; };
 		48532D80290445FF00D0D876 /* Poke_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48532D7F290445FF00D0D876 /* Poke_AppUITests.swift */; };
 		48532D82290445FF00D0D876 /* Poke_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48532D81290445FF00D0D876 /* Poke_AppUITestsLaunchTests.swift */; };
+		48532D91290446AC00D0D876 /* Stinsen in Frameworks */ = {isa = PBXBuildFile; productRef = 48532D90290446AC00D0D876 /* Stinsen */; };
+		48532D9729044A9700D0D876 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48532D9629044A9700D0D876 /* HomeCoordinator.swift */; };
+		48532D9929044ACC00D0D876 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48532D9829044ACC00D0D876 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		48532D61290445FD00D0D876 /* Poke-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poke-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48532D64290445FD00D0D876 /* Poke_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poke_AppApp.swift; sourceTree = "<group>"; };
-		48532D66290445FD00D0D876 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		48532D68290445FF00D0D876 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48532D6B290445FF00D0D876 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		48532D71290445FF00D0D876 /* Poke-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Poke-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +45,8 @@
 		48532D7B290445FF00D0D876 /* Poke-AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Poke-AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48532D7F290445FF00D0D876 /* Poke_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poke_AppUITests.swift; sourceTree = "<group>"; };
 		48532D81290445FF00D0D876 /* Poke_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poke_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		48532D9629044A9700D0D876 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		48532D9829044ACC00D0D876 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48532D91290446AC00D0D876 /* Stinsen in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +98,8 @@
 		48532D63290445FD00D0D876 /* Poke-App */ = {
 			isa = PBXGroup;
 			children = (
+				48532D9229044A5C00D0D876 /* Modules */,
 				48532D8E2904461400D0D876 /* SupportingFiles */,
-				48532D66290445FD00D0D876 /* ContentView.swift */,
 				48532D6A290445FF00D0D876 /* Preview Content */,
 			);
 			path = "Poke-App";
@@ -135,6 +139,39 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		48532D9229044A5C00D0D876 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				48532D9329044A6B00D0D876 /* Coordinator */,
+				48532D9429044A7400D0D876 /* Views */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		48532D9329044A6B00D0D876 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				48532D9529044A8200D0D876 /* Home */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		48532D9429044A7400D0D876 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				48532D9829044ACC00D0D876 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		48532D9529044A8200D0D876 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				48532D9629044A9700D0D876 /* HomeCoordinator.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,6 +188,9 @@
 			dependencies = (
 			);
 			name = "Poke-App";
+			packageProductDependencies = (
+				48532D90290446AC00D0D876 /* Stinsen */,
+			);
 			productName = "Poke-App";
 			productReference = 48532D61290445FD00D0D876 /* Poke-App.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +263,9 @@
 				Base,
 			);
 			mainGroup = 48532D58290445FD00D0D876;
+			packageReferences = (
+				48532D8F290446AC00D0D876 /* XCRemoteSwiftPackageReference "stinsen" */,
+			);
 			productRefGroup = 48532D62290445FD00D0D876 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -265,8 +308,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48532D67290445FD00D0D876 /* ContentView.swift in Sources */,
+				48532D9929044ACC00D0D876 /* HomeView.swift in Sources */,
 				48532D65290445FD00D0D876 /* Poke_AppApp.swift in Sources */,
+				48532D9729044A9700D0D876 /* HomeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +635,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		48532D8F290446AC00D0D876 /* XCRemoteSwiftPackageReference "stinsen" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rundfunk47/stinsen";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		48532D90290446AC00D0D876 /* Stinsen */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48532D8F290446AC00D0D876 /* XCRemoteSwiftPackageReference "stinsen" */;
+			productName = Stinsen;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 48532D59290445FD00D0D876 /* Project object */;
 }
