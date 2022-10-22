@@ -11,7 +11,9 @@ import SwiftUI
 struct Poke_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                HomeCoordinator().view()
+            }
         }
     }
 }
