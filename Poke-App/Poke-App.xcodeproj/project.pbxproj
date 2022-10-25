@@ -16,6 +16,11 @@
 		48532D91290446AC00D0D876 /* Stinsen in Frameworks */ = {isa = PBXBuildFile; productRef = 48532D90290446AC00D0D876 /* Stinsen */; };
 		48532D9729044A9700D0D876 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48532D9629044A9700D0D876 /* HomeCoordinator.swift */; };
 		48532D9929044ACC00D0D876 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48532D9829044ACC00D0D876 /* HomeView.swift */; };
+		48532D9C29045E4200D0D876 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 48532D9B29045E4200D0D876 /* CombineMoya */; };
+		48532D9E29045E4200D0D876 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 48532D9D29045E4200D0D876 /* Moya */; };
+		48532DA229045EC500D0D876 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48532DA129045EC500D0D876 /* Router.swift */; };
+		48532DA72904DC9900D0D876 /* TargetType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48532DA62904DC9900D0D876 /* TargetType+Extension.swift */; };
+		48549D4A29076610005D7D73 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48549D4929076610005D7D73 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,9 @@
 		48532D81290445FF00D0D876 /* Poke_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poke_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		48532D9629044A9700D0D876 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		48532D9829044ACC00D0D876 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		48532DA129045EC500D0D876 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		48532DA62904DC9900D0D876 /* TargetType+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TargetType+Extension.swift"; sourceTree = "<group>"; };
+		48549D4929076610005D7D73 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48532D9C29045E4200D0D876 /* CombineMoya in Frameworks */,
 				48532D91290446AC00D0D876 /* Stinsen in Frameworks */,
+				48532D9E29045E4200D0D876 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +108,7 @@
 		48532D63290445FD00D0D876 /* Poke-App */ = {
 			isa = PBXGroup;
 			children = (
+				48532D9F29045E5300D0D876 /* Source */,
 				48532D9229044A5C00D0D876 /* Modules */,
 				48532D8E2904461400D0D876 /* SupportingFiles */,
 				48532D6A290445FF00D0D876 /* Preview Content */,
@@ -172,6 +183,48 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		48532D9F29045E5300D0D876 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				48549D48290765FD005D7D73 /* Common */,
+				48532DA52904DC7C00D0D876 /* Extensions */,
+				48532DA029045E5900D0D876 /* Networking */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		48532DA029045E5900D0D876 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				48532DA42904602F00D0D876 /* Targets */,
+				48532DA129045EC500D0D876 /* Router.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		48532DA42904602F00D0D876 /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		48532DA52904DC7C00D0D876 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				48532DA62904DC9900D0D876 /* TargetType+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		48549D48290765FD005D7D73 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				48549D4929076610005D7D73 /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,6 +243,8 @@
 			name = "Poke-App";
 			packageProductDependencies = (
 				48532D90290446AC00D0D876 /* Stinsen */,
+				48532D9B29045E4200D0D876 /* CombineMoya */,
+				48532D9D29045E4200D0D876 /* Moya */,
 			);
 			productName = "Poke-App";
 			productReference = 48532D61290445FD00D0D876 /* Poke-App.app */;
@@ -265,6 +320,7 @@
 			mainGroup = 48532D58290445FD00D0D876;
 			packageReferences = (
 				48532D8F290446AC00D0D876 /* XCRemoteSwiftPackageReference "stinsen" */,
+				48532D9A29045E4200D0D876 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 48532D62290445FD00D0D876 /* Products */;
 			projectDirPath = "";
@@ -308,9 +364,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48532DA229045EC500D0D876 /* Router.swift in Sources */,
 				48532D9929044ACC00D0D876 /* HomeView.swift in Sources */,
+				48532DA72904DC9900D0D876 /* TargetType+Extension.swift in Sources */,
 				48532D65290445FD00D0D876 /* Poke_AppApp.swift in Sources */,
 				48532D9729044A9700D0D876 /* HomeCoordinator.swift in Sources */,
+				48549D4A29076610005D7D73 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,6 +704,14 @@
 				kind = branch;
 			};
 		};
+		48532D9A29045E4200D0D876 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -652,6 +719,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 48532D8F290446AC00D0D876 /* XCRemoteSwiftPackageReference "stinsen" */;
 			productName = Stinsen;
+		};
+		48532D9B29045E4200D0D876 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48532D9A29045E4200D0D876 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		48532D9D29045E4200D0D876 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48532D9A29045E4200D0D876 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
